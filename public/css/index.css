@@ -1,0 +1,264 @@
+@charset "UTF-8";
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	font-size: 3.6rem;
+	line-height: 1.8;
+	margin: 0;
+}
+
+header {
+	width: 100%;
+	height: 120px;
+	/*background: rgb(81,221,120);
+	background: linear-gradient(90deg, rgba(81,221,120,1) 0%, rgba(0,255,187,1) 50%, rgba(87,207,213,1) 100%);
+	*/
+	background: rgb(81,221,120);
+background: linear-gradient(90deg, rgba(81,221,120,1) 0%, rgba(0,166,255,1) 0%, rgba(87,207,213,1) 100%);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	color: white;
+	padding: 0 100px;
+}
+
+#titulo {
+	font-size: 5rem;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+#myBtn {
+	display: block;
+	cursor: pointer;
+}
+
+#circ2 {
+	position: relative;
+	width: 70px;
+	height: 40px;
+	background: white;
+	border-radius: 50px 50px 0px 0px;
+	bottom: -10px;
+}
+#circ1 {
+	position: absolute;
+	left: 18px;
+	top: -30px;
+	width: 30px;
+	height: 30px;
+	background: white;
+	border-radius: 50%;
+}
+
+#container {
+	position: relative;
+}
+
+#containerChat {
+	margin: 0 auto;
+	overflow-y: scroll;
+	width: 95%;
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+}
+
+@media only screen and (min-height: 0px) and (max-height: 751px) {
+	#containerChat {
+		height: 40;
+	}
+}
+
+@media only screen and (min-height: 652px) and (max-height: 856px) {
+	#containerChat {
+		height: 55vh;
+	}
+}
+
+@media only screen and (min-height: 856px) and (max-height: 1240px) {
+	#containerChat {
+		height: 65vh;
+	}
+}
+
+@media only screen and (min-height: 1241px) and (max-height: 1579px) {
+	#containerChat {
+		height: 71vh;
+	}
+}
+
+@media only screen and (min-height: 1570px) and (max-height: 1899px) {
+	#containerChat {
+		height: 74vh;
+	}
+}
+
+@media only screen and (min-height: 1800px) and (max-height: 2030px) {
+	#containerChat {
+		height: 79vh;
+	}
+}
+
+@media only screen and (min-height: 2030px) {
+	#containerChat {
+		height: 80vh;
+	}
+}
+
+#containerForm {
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+	padding-bottom: 1.5vh;
+	padding-top: 1.5vh;
+}
+
+#borrar {
+	width: 20%;
+	height: 100px;
+	border-radius: 10px;
+	border: none;
+	color: white;
+	background-color: #ED1815;
+	cursor: pointer;
+}
+
+#preguntas {
+	height: auto;
+	background-color: #e3e0e0;
+	border: none;
+	border-radius: 25px;
+	padding: 25px;
+	margin: 10px;
+	animation: aparecer 0.5s ease-in-out forwards;
+}
+
+@keyframes aparecer { 
+	0% {
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+#aprobar {
+	width: 20%;
+	border-radius: 10px;
+	border: none;
+	color: white;
+	background-color: rgb(54, 169, 54);
+	cursor: pointer;
+}
+
+#mensaje {
+	width: 70%;
+	border-radius: 25px;
+	border: none;
+	padding: 15px 20px;
+	line-height: 1.8;
+	background-color: #F4F4F4;
+	margin-right: 10px;
+}
+
+#enviar {
+	width: 20%;
+	border-radius: 25px;
+	border: none;
+	color: white;
+	background-color: #00a6ff;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+   border-radius: 15px;
+   text-align: center;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 68px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#adminForm{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+#user{
+	width: 100%;
+	border-radius: 25px;
+	border: none;
+	padding: 20px 20px;
+	line-height: 1.8;
+	background-color: #F4F4F4;
+	margin-top: 20px;
+	margin-bottom: 20px
+}
+
+#school{
+	width: 100%;
+	border-radius: 25px;
+	border: none;
+	padding: 20px 20px;
+	line-height: 1.8;
+	background-color: #F4F4F4;
+	margin-top: 20px;
+	margin-bottom: 20px
+}
+
+#enviarUser{
+	width: 40%;
+	height: 80px;
+	border-radius: 25px;
+	border: none;
+	color: white;
+	background-color:#00a6ff;
+	cursor: pointer;
+	margin: 20px auto;
+}

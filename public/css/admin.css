@@ -1,0 +1,229 @@
+@charset "UTF-8";
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	font-size: 3.6rem;
+	line-height: 1.8;
+	margin: 0;
+}
+
+header {
+	width: 100%;
+	height: 120px;
+	/*background: rgb(81,221,120);
+	background: linear-gradient(90deg, rgba(81,221,120,1) 0%, rgba(0,255,187,1) 50%, rgba(87,207,213,1) 100%);
+	*/
+	background: rgb(81,221,120);
+	background: linear-gradient(90deg, rgba(81,221,120,1) 0%, rgba(0,166,255,1) 0%, rgba(87,207,213,1) 100%);
+	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+	padding: 0 100px;
+}
+
+
+#clear{
+	width: 50%;
+	height: 65%;
+	border-radius: 15px;
+	border: none;
+	color: white;
+	background-color: #DD513A;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+#titulo {
+	font-size: 5rem;
+	font-weight: bold;
+	text-align: center;
+}
+
+#container {
+	position: relative;
+}
+
+#containerChat {
+	margin: 0 auto;
+	overflow-y: scroll;
+	width: 95%;
+	display: flex;
+	flex-direction: column;
+	height: 90vh;
+	margin-top: 10px;
+}
+
+#containerForm {
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+	padding-bottom: 1.5vh;
+	padding-top: 1.5vh;
+}
+/*
+#borrar {
+	width: 20%;
+	height: 100px;
+	border-radius: 10px;
+	border: none;
+	color: white;
+	background-color: #DD513A;
+	cursor: pointer;
+}*/
+
+#borrar {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: none;
+	color: white;
+	background-color: #DD513A;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	font-size: 44px;
+}
+
+
+#preguntas {
+	height: auto;
+	background-color: #e3e0e0;
+	border: none;
+	border-radius: 25px;
+	padding: 25px;
+	margin: 10px;
+	display: flex;
+	justify-content: space-between;
+	/*transform: translateY(50%);*/
+	animation: aparecer 0.5s ease-in-out forwards;
+}
+
+#preguntas div{
+	margin: 0 20px;
+}
+
+@keyframes aparecer { 
+	0% {
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+/*
+#aprobar {
+	width: 20%;
+	height: 100px;
+	border-radius: 10px;
+	border: none;
+	color: white;
+	background-color: #3ADDAF;
+	cursor: pointer;
+}*/
+
+#aprobar::before {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: none;
+	color: white;
+	background-color: #00a6ff;
+	content: '\2713';
+	display: inline-block;
+	font-family: 'Arial', sans-serif; 
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	font-size: 44px;
+}
+
+
+#mensaje {
+	width: 70%;
+	border-radius: 25px;
+	border: none;
+	padding: 15px 20px;
+	line-height: 1.8;
+	background-color: #F4F4F4;
+	margin-right: 10px;
+}
+
+#enviar {
+	width: 20%;
+	border-radius: 25px;
+	border: none;
+	color: white;
+	background-color: #00a6ff;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+
+/* Estilos generales del modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 20% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  max-width: 650px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para los botones del modal */
+.modal-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.modal-buttons button {
+  margin: 0 10px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 4px;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+#confirmar {
+  background-color: #00a6ff;
+  color: #fff;
+}
+
+#cancelar {
+  background-color: #ccc;
+  color: #000;
+}
+
+
+
