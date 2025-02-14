@@ -30,17 +30,28 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	color: white;
-	padding: 0 100px;
+	padding: 0 20px;
 }
 
 
 #clear{
-	width: 50%;
-	height: 65%;
+	width: 25%;
+	height: 85%;
 	border-radius: 15px;
 	border: none;
 	color: white;
 	background-color: #DD513A;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+#present{
+	width: 35%;
+	height: 85%;
+	border-radius: 15px;
+	border: none;
+	color: white;
+	background-color: #37a25b;
 	cursor: pointer;
 	font-weight: bold;
 }
