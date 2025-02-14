@@ -5,14 +5,49 @@
 <title>Chat de preguntas</title>
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/index.css">
+<style>
+    .carousel {
+        width: 100%;
+        max-width: 700px;
+        overflow: hidden;
+        position: relative;
+        margin: 20px auto;
+        border-radius: 15px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(135deg, #00a6ff, #57cfd5);
+        padding: 10px;
+    }
+    .carousel-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+    .carousel-slide {
+        min-width: 100%;
+        height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.9);
+        font-size: 26px;
+        color: #222;
+        font-weight: bold;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+</style>
 </head>
-
 <body>
     <header>
         <div id="titulo">Chat de preguntas</div>
-        <button id="adminLogin" onclick="window.location.href='/login'">Admin</button>
+        <button id="adminLogin" onclick="window.location.href='/login'">Iniciar sesion</button>
     </header>
-    
+    <!-- Carrusel de streaming en tiempo real -->
+    <div class="carousel">
+        <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-slide">Presentaciones en vivo...</div>
+        </div>
+    </div>
     <div id="myModal" class="modal">
         <form class="modal-content">
             <div id="adminForm">
@@ -22,7 +57,6 @@
             <button onclick="enviarDatos()" id="enviarUser">Enviar</button>
         </form>
     </div>
-    
     <div id="container">
         <div id="containerChat">
             <!-- #preguntas -->
