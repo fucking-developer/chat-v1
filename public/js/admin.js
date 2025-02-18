@@ -8,6 +8,7 @@ var modal = document.getElementById("modal");
 var confirmarBtn = document.getElementById("confirmar");
 var cancelarBtn = document.getElementById("cancelar");
 var clearButton = document.getElementById("clear");
+var logoutButton = document.getElementById("logout");
 
 clearButton.addEventListener("click", function() {
 	modal.style.display = "block";
@@ -25,6 +26,22 @@ cancelarBtn.addEventListener("click", function() {
 	modal.style.display = "none";
 });
 
+document.getElementById("home").addEventListener("click", function() {
+    window.location.href = "index.html"; 
+});
+
+
+// Función para cerrar sesión (Logout)
+logoutButton.addEventListener("click", function() {
+    fetch('/logout', {
+        method: 'GET',
+        credentials: 'include'
+    }).then(response => {
+        if (response.redirected) {
+            window.location.href = response.url; // Redirigir al login
+        }
+    }).catch(error => console.error('Error:', error));
+});
 
 function hayWebSocket() {
 	if ('WebSocket' in window)
@@ -54,12 +71,9 @@ function crearWebSocket(host) {
 	return null;
 }
 
-
 chat.reportar = function(texto) {
 	pantallaChat.escribir(texto);
 }
-
-
 
 chat.atenderMensajeServer = function(mensajeServer) {
 	let indice = mensajeServer.data.split("#")[0];
